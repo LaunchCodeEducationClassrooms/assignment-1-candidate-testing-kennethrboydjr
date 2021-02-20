@@ -58,7 +58,8 @@ function gradeQuiz(candidateAnswers) {
     i++;
   }
 let grade = ((correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4]) / Number(correctAnswers.length)) * 100;
-console.log(`>>> Overall Grade: ${grade}% (${correctAnswers} of 5 responses correct) <<<`);
+let sum = (correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4])
+console.log(`>>> Overall Grade: ${grade}% (${sum} of 5 responses correct) <<<`);
 if (grade >=80) {
   console.log(">>> Status: Passed <<<");
 } else console.log(">>> Status: FAILED <<<");
