@@ -30,6 +30,7 @@ function askQuestion() {
     candidateAnswers[i] = input.question(questions[i]);
     console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}`);
+    console.log("");
     i++;
   }
 }
@@ -58,7 +59,8 @@ function gradeQuiz(candidateAnswers) {
     i++;
   }
 let grade = ((correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4]) / Number(correctAnswers.length)) * 100;
-let sum = (correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4])
+let sum = (correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4]);
+console.log("")
 console.log(`>>> Overall Grade: ${grade}% (${sum} of 5 responses correct) <<<`);
 if (grade >=80) {
   console.log(">>> Status: Passed <<<");
