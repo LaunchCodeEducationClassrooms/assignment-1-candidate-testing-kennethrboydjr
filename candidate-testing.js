@@ -11,7 +11,7 @@ let candidateAnswer = ""
 let questions = ["Who was the first woman in space? ", "True of false: 5000 meters = 5 kilometers. ", "(5+3)/2 * 10 = ? ", "Given the array [8, 'orbit, 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "]
 let correctAnswers = ["Sally Ride", "True", "40", "Trajectory", "3" ]
 let candidateAnswers = ["", "", "", "", ""]
-
+let candidateSum = ["", "", "", "", ""]
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -52,14 +52,14 @@ function gradeQuiz(candidateAnswers) {
 
   while (i < 5) {
     if (candidateAnswers[i].toUpperCase() == correctAnswers[i].toUpperCase()) {
-      correctAnswers[i] = 1
+      candidateSum[i] = 1
     }else {
-      correctAnswers[i] = 0
+      candidateSum[i] = 0
     }
     i++;
   }
-let grade = ((correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4]) / Number(correctAnswers.length)) * 100;
-let sum = (correctAnswers[0] + correctAnswers[1] + correctAnswers[2] + correctAnswers[3] + correctAnswers[4]);
+let grade = ((candidateSum[0] + candidateSum[1] + candidateSum[2] + candidateSum[3] + candidateSum[4]) / Number(correctAnswers.length)) * 100;
+let sum = (candidateSum[0] + candidateSum[1] + candidateSum[2] + candidateSum[3] + candidateSum[4]);
 console.log("")
 console.log(`>>> Overall Grade: ${grade}% (${sum} of 5 responses correct) <<<`);
 if (grade >=80) {
