@@ -21,9 +21,17 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question(question);
+  /*candidateAnswer = input.question(question);
   console.log(`Your Answer: ${candidateAnswer}`);
-  console.log(`Correct Answer: ${correctAnswer}`)
+  console.log(`Correct Answer: ${correctAnswer}`) */
+  let i = 0;
+
+  while (i < 5) {
+    candidateAnswers[i] = input.question(questions[i]);
+    console.log(`Your Answer: ${candidateAnswers[i]}`);
+    console.log(`Correct Answer: ${correctAnswers[i]}`);
+    i++;
+  }
 }
 
 function gradeQuiz(candidateAnswers) {
